@@ -1,0 +1,88 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b\fs20 \cf0 \expnd0\expndtw0\kerning0
+PROGRAM 5\
+
+\f1\b0 <!DOCTYPE html>\
+<html>\
+<head>\
+\'a0 \'a0 <title>College Library Form</title>\
+\'a0 \'a0 <style>\
+\'a0 \'a0 \'a0 \'a0 .error \{ color: red; \}\
+\'a0 \'a0 </style>\
+</head>\
+<body>\
+\'a0\
+<?php\
+$name = $roll = $email = $dept = "";\
+$nameErr = $rollErr = $emailErr = $deptErr = "";\
+if ($_SERVER["REQUEST_METHOD"] == "POST") \{\
+\'a0 \'a0 if (empty($_POST["name"])) \{\
+\'a0 \'a0 \'a0 \'a0 $nameErr = "Name is required";\
+\'a0 \'a0 \} else \{\
+\'a0 \'a0 \'a0 \'a0 $name = test_input($_POST["name"]);\
+\'a0 \'a0 \'a0 \'a0 if (!preg_match("/^[a-zA-Z ]*$/", $name)) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $nameErr = "Only letters and spaces allowed";\
+\'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \}\
+\'a0 \'a0 if (empty($_POST["roll"])) \{\
+\'a0 \'a0 \'a0 \'a0 $rollErr = "Roll number is required";\
+\'a0 \'a0 \} else \{\
+\'a0 \'a0 \'a0 \'a0 $roll = test_input($_POST["roll"]);\
+\'a0 \'a0 \'a0 \'a0 if (!preg_match("/^[0-9]+$/", $roll)) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $rollErr = "Only numbers allowed";\
+\'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \}\
+\'a0 \'a0 if (empty($_POST["email"])) \{\
+\'a0 \'a0 \'a0 \'a0 $emailErr = "Email is required";\
+\'a0 \'a0 \} else \{\
+\'a0 \'a0 \'a0 \'a0 $email = test_input($_POST["email"]);\
+\'a0 \'a0 \'a0 \'a0 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 $emailErr = "Invalid email format";\
+\'a0 \'a0 \'a0 \'a0 \}\
+\'a0 \'a0 \}\
+\'a0 \'a0 if (empty($_POST["dept"])) \{\
+\'a0 \'a0 \'a0 \'a0 $deptErr = "Department is required";\
+\'a0 \'a0 \} else \{\
+\'a0 \'a0 \'a0 \'a0 $dept = test_input($_POST["dept"]);\
+\'a0 \'a0 \}\
+\}\
+function test_input($data) \{\
+\'a0 \'a0 return htmlspecialchars(stripslashes(trim($data)));\
+\}\
+?>\
+<h2>College Library Student Form</h2>\
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">\
+\'a0 Name: <input type="text" name="name" value="<?php echo $name; ?>">\
+<span class="error">* <?php echo $nameErr; ?></span><br><br>\
+Roll No: <input type="text" name="roll" value="<?php echo $roll; ?>">\
+\'a0 \'a0 <span class="error">* <?php echo $rollErr; ?></span><br><br>\
+Email: <input type="text" name="email" value="<?php echo $email; ?>">\
+\'a0 \'a0 <span class="error">* <?php echo $emailErr; ?></span><br><br>\
+Department:\
+\'a0 \'a0 <select name="dept">\
+\'a0 \'a0 \'a0 \'a0 <option value="">Select</option>\
+\'a0 \'a0 \'a0 \'a0 <option value="Computer Science" <?php if($dept=="Computer Science") echo "selected"; ?>>Computer Science</option>\
+\'a0 \'a0 \'a0 \'a0 <option value="Data Analytics" <?php if($dept=="Data Analytics") echo "selected"; ?>>Data Analytics</option>\
+\'a0 \'a0 \'a0 \'a0 <option value="Mathematics" <?php if($dept=="Mathematics") echo "selected"; ?>>Mathematics</option>\
+\'a0 \'a0 </select>\
+\'a0 \'a0 <span class="error">* <?php echo $deptErr; ?></span><br><br> <input type="submit" name="submit" value="Submit">\
+</form>\
+<?php\
+// If all fields are valid, display details\
+if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($nameErr) && empty($rollErr) && empty($emailErr) && empty($deptErr)) \{\
+\'a0 \'a0 echo "<h3>Student Details Entered:</h3>";\
+\'a0 \'a0 echo "Name: " . $name . "<br>";\
+\'a0 \'a0 echo "Roll No: " . $roll . "<br>";\
+\'a0 \'a0 echo "Email: " . $email . "<br>";\
+\'a0 \'a0 echo "Department: " . $dept . "<br>";\
+\}\
+?>\
+</body>\
+</html>}
