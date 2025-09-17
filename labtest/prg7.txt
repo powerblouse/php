@@ -1,0 +1,504 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c84706;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Program 7:\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <?php\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 $last_visited_time=time();\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 setcookie('last_visited',$last_visited_time,tim e()+3600);\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 if(isset($_COOKIE['last_visited']))\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \{ $last_visited=$_COOKIE['last_visited']; date_default_timezone_set("Asia/Kolkata");\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri1500\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 $current_time=date('y-m-d H:i:s'); else\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \{ $last_visited_date="unknown"; \} ?>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <!DOCTYPE html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <head>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <title>COLLEGE HOMEPAGE</title>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri4680\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 <style> body \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri2700\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 background-color: #ef6; margin:0; \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri4060\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 .header1 \{ display:flex; color: white;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri2720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 background-color: grey; padding: 5px; \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri3260\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 ul \{ display:flex; \}li \{ list-style:none; padding:0 15px; \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 .headlist \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri2960\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 text-decoration:none; font-size:20px; \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri4060\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 .mainclass \{ background-\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri40\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 image:url("https://getmyuni.azureedge.net/co llege-image/big/psg-college-of-arts-and- science-psgcas-coimbatore.jpg");\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri1900\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 background-repeat:no_repeat; background-size:cover;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri3520\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 height:630px; text-align:center;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri4240\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \} .lastvisit \{ color:red; \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 .contact\{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri3300\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 text-align:left; padding-left: 15px; padding-top: 15px;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri2540\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 .Footerdetails\{ background-color:yellow; height:50px;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </style>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </head>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <body>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <header class="header1">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <img\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 src="https://ecampus.psgtech.ac.in/Images/P SG.png">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 <h3><marquee behavior="alternate">PSG COLLEGE OF ARTS &\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 SCIENCE</marquee></h3>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <nav>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <ul>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <li><a class="headlist" href="login.php" style="color:yellow">Admissions</a></li>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <li><a class="headlist" href="#"\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 style="color:yellow">Home</a></li>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <li><a class="headlist" href="#"\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 style="color:yellow">Programs</a></li>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <li><a class="headlist" href="#"\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 style="color:yellow">Exams</a></li>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <li><a class="headlist" href="#"\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 style="color:yellow">Placement</a></li>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <li><a class="headlist" href="#"\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 style="color:yellow">About</a></li>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </ul>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </nav>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </header>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <main class="mainclass">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <br><br>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <h2>WELCOME TO PSG COLLEGE OF ARTS & SCIENCE</h2>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri580\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 <p><b>Explore our wide range of academic progress, state_of_the_art facilities and\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 diverse students community.</b></p>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri400\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 <p class="lastvisit"><b><em>Your last visited on this page on <?php echo $current_time;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 ?></em></b></p>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <audio autoplay loop>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri1140\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 <source src="background_music.mp3" type="audio/mpeg">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri860\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 Your browser does not support the audio element.\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 </audio>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri700\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 <img src="animated_logo.gif" alt="College Logo" width="150">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 </main>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <div class="Footerdetails">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\li120\fi-120\ri3100\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 <p class="contact"> Contact:0421248567
+\f1\fs24 \AppleTypeServices \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 <?php\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 date_default_timezone_set("Asia/Kolkata");\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 $lastVisited = date("Y-m-d H:i:s");\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 ?>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \cb3 \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 <!DOCTYPE html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <head>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <title>PSG College of Arts & Science</title>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <style>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 body \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin: 0;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 font-family: Arial, sans-serif;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 .navbar \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 background-color: #555;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 padding: 10px;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 color: white;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 .navbar a \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 color: yellow;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin: 0 15px;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 text-decoration: none;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 .navbar a:hover \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 color: white;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 .content \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 text-align: center;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 padding: 20px;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 img \{\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 width: 80%;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 max-width: 700px;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin-top: 20px;\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 </style>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </head>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <body>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \cb3 \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 <div class="navbar">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <strong>PSG COLLEGE OF ARTS & SCIENCE</strong>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <a href="index.php">Home</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <a href="about.php">About</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <a href="programmes.php">Programs</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <a href="exams.php">Exams</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <a href="placement.php">Placement</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </div>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \cb3 \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 <div class="content">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <h2>WELCOME TO PSG COLLEGE OF ARTS & SCIENCE</h2>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <p>Explore our wide range of academic programs, state-of-the-art facilities and diverse student community.</p>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <p style="color: red;">Your last visited on this page on <?php echo $lastVisited; ?></p>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <img src="college.jpg" alt="College Logo">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </div>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \cb3 \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 </body>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \cb3 \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 Sample about.php\'a0
+\f0\b0 \AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 <!DOCTYPE html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <head>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <title>About - PSG College</title>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </head>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 <body>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 <div class="navbar">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <strong>PSG COLLEGE OF ARTS & SCIENCE</strong>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <a href="index.php">Home</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <a href="about.php">About</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <a href="programmes.php">Programs</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <a href="exams.php">Exams</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <a href="placement.php">Placement</a>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 </div>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \cb3 \'a0
+\f1\fs24 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \'a0\'a0\'a0 <div class="content">\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <h2>About Us</h2>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <p>PSG College of Arts & Science was established in 1947. It is an autonomous institution affiliated with Bharathiar University...</p>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 \'a0\'a0\'a0 </div>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </body>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+
+\f0\fs29\fsmilli14667 \AppleTypeServices\AppleTypeServicesF65539 \cb3 </html>\AppleTypeServices \'a0
+\f1\fs24 \cb1 \
+}
