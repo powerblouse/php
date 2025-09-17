@@ -1,57 +1,49 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\csgray\c0;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-
-\f0\b\fs18 \cf2 PROGRAM 8\
-
-\f1\b0 <?php\
-date_default_timezone_set("Asia/Kolkata");\
-// Check for last visit cookie\
-if (isset($_COOKIE["lastVisit"])) \{\
-$lastVisit = $_COOKIE["lastVisit"];\
-\} else \{\
-$lastVisit = "This is your first visit!";\
-\}\
-// Set new cookie\
-$currentTime = date("Y-m-d H:i:s");\
-setcookie("lastVisit", $currentTime, time() + (365 * 24 *\
-60 * 60)); // 1 year\
-?>\
-<!DOCTYPE html>\
-<html>\
-<head>\
-</head>\
-<body>\
-<title>PSG College of Arts & Science</title>\
-<!-- Simple Navigation -->\
-<table width="100%" bgcolor="gray">\
-<tr>\
-<td><b style="color:white;">PSG COLLEGE OF\
-ARTS & SCIENCE</b></td>\
-<td align="right">\
-<a href="admissions.php">Admissions</a> |\
-<a href="index.php">Home</a> |\
-<a href="programmes.php">Programs</a> |\
-<a href="about.php">About</a>\
-</td>\
-</tr>\
-</table>\
-<!-- Content Section -->\
-<center>\
-<h2>WELCOME TO PSG COLLEGE OF ARTS &\
-SCIENCE</h2>\
-<p>Explore our wide range of academic programs,\
-state-of-the-art facilities and diverse student\
-community.</p>\
-<p style="color:red;">Your last visited on this page on\
-<?php echo $lastVisit; ?></p>\
-<img\
-src="https://d1h684srpghjti.cloudfront.net/assets/images/\
-gallary_photos/t1684837571_i0JtvTF8Jv.jpg?w=800&fo\
-rmat=webp" alt="College Image" width="70%">\
-</center>\
-</body>\
-</html>}
+PROGRAM 8
+<?php
+date_default_timezone_set("Asia/Kolkata");
+// Check for last visit cookie
+if (isset($_COOKIE["lastVisit"])) {
+$lastVisit = $_COOKIE["lastVisit"];
+} else {
+$lastVisit = "This is your first visit!";
+}
+// Set new cookie
+$currentTime = date("Y-m-d H:i:s");
+setcookie("lastVisit", $currentTime, time() + (365 * 24 *
+60 * 60)); // 1 year
+?>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<title>PSG College of Arts & Science</title>
+<!-- Simple Navigation -->
+<table width="100%" bgcolor="gray">
+<tr>
+<td><b style="color:white;">PSG COLLEGE OF
+ARTS & SCIENCE</b></td>
+<td align="right">
+<a href="admissions.php">Admissions</a> |
+<a href="index.php">Home</a> |
+<a href="programmes.php">Programs</a> |
+<a href="about.php">About</a>
+</td>
+</tr>
+</table>
+<!-- Content Section -->
+<center>
+<h2>WELCOME TO PSG COLLEGE OF ARTS &
+SCIENCE</h2>
+<p>Explore our wide range of academic programs,
+state-of-the-art facilities and diverse student
+community.</p>
+<p style="color:red;">Your last visited on this page on
+<?php echo $lastVisit; ?></p>
+<img
+src="https://d1h684srpghjti.cloudfront.net/assets/images/
+gallary_photos/t1684837571_i0JtvTF8Jv.jpg?w=800&fo
+rmat=webp" alt="College Image" width="70%">
+</center>
+</body>
+</html>
