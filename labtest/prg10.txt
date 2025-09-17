@@ -30,4 +30,5 @@ echo "Query executed successfully!";
 echo "Error: " . $conn->error;
 }
 }
-$conn->close()?>
+$conn->close();
+?>
