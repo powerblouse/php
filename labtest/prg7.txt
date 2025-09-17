@@ -4,7 +4,7 @@ Program 7:
 
 $last_visited_time=time(); 
 
-setcookie('last_visited',$last_visited_time,tim e()+3600); 
+setcookie('last_visited',$last_visited_time,time()+3600); 
 
 if(isset($_COOKIE['last_visited'])) 
 
